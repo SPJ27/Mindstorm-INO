@@ -5,12 +5,10 @@ char val = 0;
 
 void setup() {
   Serial.begin(9600);
-  move(2, BACKWARD, 255);
 }
 
 void loop() {
   val = bluetooth_read();
-
   if (val == '1') {
     move(1, FORWARD, 255);
     move(2, FORWARD, 255);
