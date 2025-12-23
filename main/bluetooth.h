@@ -5,5 +5,5 @@ char bluetooth_read() {
     incomingValue = Serial.read();
     return incomingValue;
   }
-  return 0;
+  return NULL;
 }
