@@ -1,12 +1,17 @@
-const int trigPin = 9;
-const int echoPin = 10;
+int trigPin;
+int echoPin;
 
-float duration, distance;
+unsigned long duration;
+float distance;
 
-float find_distance() {
+void setup_distance(int trig = 9, int echo = 10) {
+  trigPin = trig;
+  echoPin = echo;
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+}
 
+float find_distance() {
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -18,3 +23,4 @@ float find_distance() {
   return distance;
   delay(100);
 }
+
