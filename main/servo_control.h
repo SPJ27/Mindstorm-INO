@@ -1,11 +1,9 @@
-#include <Servo.h>
+#ifndef SERVO_CONTROL_H
+#define SERVO_CONTROL_H
 
-Servo myservo;
+#include <Arduino.h>
 
-void servo_use(uint8_t port) {
-  myservo.attach(port);
-}
+void servo_use(uint8_t port);
+void servo_rotate(uint8_t port, int angle);
 
-void servo_rotate(uint8_t port, int val) {
-  myservo.write(val);
-}
+#endif

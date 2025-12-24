@@ -1,11 +1,19 @@
-int M1 = 1;
-int M2 = 2;
-int M3 = 3;
-int M4 = 4;
+#ifndef MINDSTORM_H
+#define MINDSTORM_H
 
-int A = 1;
-int B = 2;
-int C = 3;
+extern const int M1;
+extern const int M2;
+extern const int M3;
+extern const int M4;
 
-int SA = 10;
-int SB = 9;
+extern const int A;
+extern const int B;
+extern const int C;
+
+extern const int SA;
+extern const int SB;
+
+extern const int FRONT; 
+extern const int BACK; 
+
+#endif

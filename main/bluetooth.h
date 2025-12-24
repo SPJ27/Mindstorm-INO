@@ -1,9 +1,6 @@
-char incomingValue;
+#ifndef BLUETOOTH_H
+#define BLUETOOTH_H
 
-char bluetooth_read() {
-  if (Serial.available() > 0) {
-    incomingValue = Serial.read();
-    return incomingValue;
-  }
-  return NULL;
-}
+char bluetooth_read();
+
+#endif

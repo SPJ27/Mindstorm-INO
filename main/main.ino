@@ -1,48 +1,70 @@
-/*
-Some basic functions ->
-1. Motor control
- - move(motor number(1,2,3), direction(FORWARD, BACKWARD, BRAKE), speed(0 - 255))
-2. Bluetooth
- - bluetooth_read() -> returns NULL or a char
-3. Distance (Ultrasonic Sensor)
- - setup_distance() = use this in void setup() function
- - find_distance() = returns distance in float 
-*/
-#include "mindstorm.h"
-#include "motors.h"
-#include "bluetooth.h"
-#include "distance.h"
-#include "infrared.h"
-// #include "servo_control.h"
+// #include <LiquidCrystal_I2C.h>
 
-char val = 0;
+// LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// char *list[] = { "1. Run Code", "2. View Code", "3. Load Code", "4. Open Settings", "5. Manage Device", "6. Exit Code"};
+
+// int val = 0;
+// int button_value = 0;
+
+// int item_1 = -1;
+// int item_2 = 0;
+
+// void setup() {
+//   pinMode(2, INPUT);
+
+//   Serial.begin(9600);
+//   lcd.init();
+//   lcd.backlight();
+//   lcd.setCursor(0, 0);
+//   lcd.print("Mindstorm INO");
+//   lcd.setCursor(0, 1);
+//   lcd.print("By Saksham Jain");
+// }
+
+
+// void loop() {
+//   button_value = digitalRead(2);
+//   if (val == 0 && button_value == 1) {
+//     val = 1;
+//             item_1++; item_2++;
+
+//     lcd.clear();
+//     lcd.setCursor(0,0 );
+//     lcd.print(">");
+//     lcd.setCursor(2,0 );
+//     lcd.print(list[item_1]);
+//     lcd.setCursor(0,1);
+//     lcd.print(list[item_2]);
+
+//     Serial.println("clicked");
+//   } else if (button_value == 0) {
+//     val = 0;
+//   }
+// }
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Set the LCD address to 0x27 in PCF8574 by NXP and Set to 0x3F in PCF8574A by Ti
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+byte customChar[] = {
+  B00100,
+  B00110,
+  B10101,
+  B01110,
+  B00110,
+  B01101,
+  B10110,
+  B00100
+};
+
 void setup() {
-  Serial.begin(9600);
-  // servo_use(A);
-  // move(M1, BACKWARD, 255);
-  // move(M2, FORWARD, 255);
+  lcd.init();
+  lcd.backlight();
+  lcd.createChar(0, customChar);
+  lcd.home();
+  lcd.write(0);
 }
 
-void loop() {
-  Serial.println(check_infrared(A));
-
-  // val = bluetooth_read();
-  // if (val == '1') {
-  //   move(M1, FORWARD, 255);
-  //   move(M2, FORWARD, 255);
-  // } else if (val == '2') {
-  //   move(M1, BACKWARD, 255);
-  //   move(M2, BACKWARD, 255);
-  // } else if (val == '3'){
-  //   move(M1, FORWARD, 255);
-  //   move(M2, BACKWARD, 255);
-  // } else if (val == '4'){
-  //   move(M1, BACKWARD, 255);
-  //   move(M2, FORWARD, 255);
-  // }
-  // Serial.println(find_distance());
-  // servo_rotate(140);
-  // for (int i = 0; i < 180; i++) {
-  //   servo_rotate(SA, i);
-  // }
-}
+void loop() { }
