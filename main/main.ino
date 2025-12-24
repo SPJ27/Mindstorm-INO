@@ -12,24 +12,29 @@ Some basic functions ->
 #include "motors.h"
 #include "bluetooth.h"
 #include "distance.h"
+#include "servo_control.h"
 
 char val = 0;
-
 void setup() {
   Serial.begin(9600);
-  setup_distance();
-
+  servo_use(A);
+  // move(M1, BACKWARD, 255);
+  // move(M2, FORWARD, 255);
+  // setup_distance();
 }
 
 void loop() {
   // val = bluetooth_read();
-  // f (val == '1') {
-  //   move(1, FORWARD, 255);
-  //   move(2, FORWARD, 255);
+  // if (val == '1') {
+  //   move(M1, FORWARD, 255);
+  //   move(M2, FORWARD, 255);
   // } else if (val == '2') {
-  //   move(1, BACKWARD, 255);
-  //   move(2, BACKWARD, 255);
-  // }i
-  Serial.println(find_distance());
-
+  //   move(M1, BACKWARD, 255);
+  //   move(M2, BACKWARD, 255);
+  // }
+  // Serial.println(find_distance());
+  // servo_rotate(140);
+  for (int i = 0; i < 180; i++) {
+    servo_rotate(A, i);
+  }
 }
