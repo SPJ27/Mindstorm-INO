@@ -4,9 +4,20 @@ int echoPin;
 unsigned long duration;
 float distance;
 
-void setup_distance(int trig = 9, int echo = 10) {
-  trigPin = trig;
-  echoPin = echo;
+
+void setup_distance(uint8_t port) {
+  if (port == A){
+    trigPin = A0;
+    echoPin = A1;
+  }
+  else if (port == B){
+    trigPin = A2;
+    echoPin = A3;
+  }
+  else if (port == C){
+    trigPin = 2;
+    echoPin = 4;
+  }
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
 }

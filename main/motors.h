@@ -1,9 +1,6 @@
 #include "AFMotor_R4.h"
 
-int M1 = 1;
-int M2 = 2;
-int M3 = 3;
-int M4 = 4;
+
 
 AF_DCMotor motor_1(1);  // Create motor on M1
 AF_DCMotor motor_2(2);  // Create motor on M2
