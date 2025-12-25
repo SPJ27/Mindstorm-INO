@@ -1,14 +1,13 @@
 #include "mindstorm.h"
 #include "display.h"
-#include "distance.h"
+#include "buttons.h"
 
 void setup() {
   Serial.begin(9600);
-  setup_distance(A);
   start_display();
+  setup_button(A);
 }
 
 void loop() {
-  write_text(0, "Distance: "+ String(find_distance(A)) + " cm");
-  wait(1);
+  write_text(0, "String(detect_action(A))");
 }
