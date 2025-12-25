@@ -15,4 +15,6 @@ const int SB = 9;
 const int FRONT = 1;
 const int BACK = 2;
 
-
+void wait(int seconds){
+  delay(seconds*1000)
+}

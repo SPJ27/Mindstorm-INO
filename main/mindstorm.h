@@ -16,4 +16,5 @@ extern const int SB;
 extern const int FRONT; 
 extern const int BACK; 
 
+void wait(int seconds)
 #endif

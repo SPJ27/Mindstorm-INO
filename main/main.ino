@@ -10,5 +10,5 @@ void setup() {
 
 void loop() {
   write_text(0, "Distance: "+ String(find_distance(A)) + " cm");
-  delay(1000);
+  wait(1);
 }

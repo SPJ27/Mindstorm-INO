@@ -12,6 +12,9 @@ void start_display() {
 
 void write_text(int line, String text) {
   lcd.setCursor(0, line);
-  lcd.print(text);
+  lcd.print(text);s
+}
 
+void clear_display(){
+  lcd.clear();
 }
