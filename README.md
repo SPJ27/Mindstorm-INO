@@ -178,7 +178,7 @@ move(M2, FRONT, 200);
 
 ---
 
-## 📏 Distance Module (`distance.h`)
+## Distance Module (`distance.h`)
 
 Used with ultrasonic sensors to measure distance.
 
@@ -202,7 +202,7 @@ Distance is returned in **centimeters**.
 
 ---
 
-## 🦾 Servo Module (`servo.h`)
+## Servo Module (`servo.h`)
 
 Used for arms, grippers, camera mounts, etc.
 
