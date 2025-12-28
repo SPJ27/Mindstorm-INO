@@ -14,7 +14,7 @@ This library is designed for:
 
 ---
 
-## 📦 Library Structure
+## Library Structure
 
 ```text
 mindstorm.h     // Core library (REQUIRED)
@@ -30,21 +30,21 @@ servo.h        // Servo motor control
 
 ## ⚠️ IMPORTANT (Must Read)
 
-### 1️⃣ `mindstorm.h` is **MANDATORY**
+### `mindstorm.h` is **MANDATORY**
 
 You **must include** `mindstorm.h` in every project.
 
-### 2️⃣ `setup_modules()` is REQUIRED
+###  `setup_modules()` is REQUIRED
 
 You **must call** `setup_modules()` inside `void setup()`.
 
-❌ Without this:
+Without this:
 
 * Pins won’t be configured
 * Modules won’t work
 * Behavior is undefined
 
-✅ Correct usage:
+Correct usage:
 
 ```cpp
 #include "mindstorm.h"
@@ -59,7 +59,7 @@ void loop() {
 
 ---
 
-## 🧠 Core Constants (From `mindstorm.h`)
+## Core Constants (From `mindstorm.h`)
 
 ### Motors
 
@@ -88,7 +88,7 @@ BACK
 
 ---
 
-## 🖥️ Display Module (`display.h`)
+## Display Module (`display.h`)
 
 Used for LCD-based text output (like Mindstorms screen).
 
@@ -109,11 +109,11 @@ write_text(0, "Hello Robot");
 write_text(1, "MindStorm OS");
 ```
 
-📌 `line` can be `0` or `1` (for 16x2 LCD).
+`line` can be `0` or `1` (for 16x2 LCD).
 
 ---
 
-## 📡 Bluetooth Module (`bluetooth.h`)
+## Bluetooth Module (`bluetooth.h`)
 
 Used to receive commands wirelessly from a phone or computer.
 
@@ -135,7 +135,7 @@ if (cmd == "F") {
 
 ---
 
-## 🔴 Infrared Module (`infrared.h`)
+## Infrared Module (`infrared.h`)
 
 Used for IR obstacle detection or line sensing.
 
@@ -153,11 +153,11 @@ if (check_infrared(A) == 1) {
 }
 ```
 
-📌 Returns a digital value (0 or 1).
+Returns a digital value (0 or 1).
 
 ---
 
-## ⚙️ Motor Module (`motors.h`)
+## Motor Module (`motors.h`)
 
 Controls DC motors with speed and direction.
 
@@ -174,7 +174,7 @@ move(M1, FRONT, 200);
 move(M2, FRONT, 200);
 ```
 
-📌 `speed` range: `0–255`
+`speed` range: `0–255`
 
 ---
 
@@ -198,7 +198,7 @@ if (d < 10) {
 }
 ```
 
-📌 Distance is returned in **centimeters**.
+Distance is returned in **centimeters**.
 
 ---
 
@@ -220,11 +220,11 @@ servo_use(SA);
 servo_rotate(SA, 90);
 ```
 
-📌 Angle range: `0–180`
+Angle range: `0–180`
 
 ---
 
-## 🧪 Full Example (Mini Mindstorms Program)
+## Full Example (Mini Mindstorms Program)
 
 ```cpp
 #include "mindstorm.h"
