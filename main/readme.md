@@ -5,31 +5,73 @@
 The **MindStorm Arduino Library** makes Arduino programming feel like LEGO Mindstorms.
 Instead of dealing with raw pins, delays, and low-level code, you interact with **motors, sensors, display, Bluetooth, and servos** using simple, high-level functions.
 
-This library is designed for:
+### Why Mindstorm INO?
 
-* Educational robots
-* Custom programmable bricks
-* Low-cost LEGO Mindstorms alternatives
-* Beginners learning robotics the **right way**
+I built **Mindstorm INO** because I wanted a faster and simpler way to build robots without redesigning the hardware every time.  
+It also helps me experiment freely, switch projects quickly, and learn robotics in a hands-on way.  
+I plan on to make it more compact by designing PCB boards.
+
+---
+
+## Hardware Instructions  
+### Building the **Mindstorm INO Intelligent Brick**
+
+This section explains the hardware required and how to wire the components to build your own **Mindstorm INO–style programmable brick** using Arduino.
+
+## Components Required
+
+| Quantity | Component |
+|--------:|-----------|
+| 1 | Arduino UNO / Nano |
+| 1 | L293D Motor Driver IC |
+| 4 | Push Buttons (UP / DOWN / OK / BACK) |
+| 1 | HC-05 Bluetooth Module |
+| 1 | I2C LCD Display (16×2) |
+| 1+ | Breadboard(s) |
+| — | Jumper Wires |
 
 ---
 
-## Hardware Instructions
+## Circuit Diagram
 
-Building the Mindstorm INO Intelligent Brick
+Below is the complete wiring diagram for the Mindstorm INO Intelligent Brick:
 
-### Components Required
-1. 1x Arduino UNO/Nano
-2. 1x L293 IC
-3. 4x Push buttons
-4. 1x HC-05 Module
-5. 1x I2C LCD 16x2
-6. Breadboards
-7. Jumper Wires
-
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SPJ27/Mindstorm-INO/refs/heads/main/Circuit%20Diagram.png" width="600">
+</p>
 
 ---
+
+## Notes
+
+- The **L293D** is used to control DC motors (M1 and M2).
+- The **I2C LCD** minimizes pin usage and simplifies wiring.
+- Push buttons are configured using **INPUT_PULLUP** (no external resistors required).
+- The **HC-05 Bluetooth module** enables wireless control and communication.
+- This circuit is designed to be **modular**, similar to LEGO Mindstorms.
+
+---
+
+## Important Tips
+
+- Double-check power connections before turning on the circuit.
+- Use a common **GND** for all modules.
+- If motors behave erratically, add decoupling capacitors near the L293D.
+- Keep Bluetooth RX/TX wiring correct (crossed).
+
+---
+
+## Next Step
+
+Once the hardware is assembled:
+1. Upload the **Mindstorm INO firmware**
+2. Power on the system
+3. Navigate programs using the button-based menu
+4. Run Mindstorms-style robot programs
+
+---
+
+
 
 ## Library Structure
 
