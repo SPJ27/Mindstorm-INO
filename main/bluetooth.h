@@ -1,6 +1,6 @@
 #ifndef BLUETOOTH_H
 #define BLUETOOTH_H
 
-char bluetooth_read();
+String bluetooth_read();
 
 #endif

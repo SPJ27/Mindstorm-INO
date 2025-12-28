@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "bluetooth.h"
 
-char bluetooth_read() {
+String bluetooth_read() {
   if (Serial.available()) {
     return Serial.read();
   }

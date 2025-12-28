@@ -4,6 +4,6 @@
 #include <Arduino.h>
 
 
-int detect_action(uint8_t port);
+int detect_action(int pin);
 
 #endif
