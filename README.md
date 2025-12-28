@@ -1,8 +1,8 @@
-# Arduino MindStorm Library
+# Mindstorm INO
 
 *A LEGO Mindstorms–style abstraction layer for Arduino*
 
-The **MindStorm Arduino Library** makes Arduino programming feel like LEGO Mindstorms.
+The **Mindstorm INO Library** makes Arduino programming feel like LEGO Mindstorms.
 Instead of dealing with raw pins, delays, and low-level code, you interact with **motors, sensors, display, Bluetooth, and servos** using simple, high-level functions.
 
 This library is designed for:
