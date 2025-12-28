@@ -7,10 +7,7 @@ Instead of dealing with raw pins, delays, and low-level code, you interact with 
 
 ### Why Mindstorm INO?
 
-Lego Mindstorms are expensive, so this board aims to (sort of) act as a cheap-alternative to Lego.
-I built **Mindstorm INO** because I wanted a faster and simpler way to build robots without redesigning the hardware every time.  
-It also helps me experiment freely, switch projects quickly, and learn robotics in a hands-on way.  
-I plan on to make it more compact by designing PCB boards.
+Lego Mindstorms are expensive, so this board aims to (sort of) act as a cheap-alternative to Lego. I built **Mindstorm INO** because I wanted a faster and simpler way to build robots without redesigning the hardware every time. I plan on to make it more compact by designing PCB boards.
 
 ---
 
