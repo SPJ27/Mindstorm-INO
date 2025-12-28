@@ -3,7 +3,7 @@
 
 String bluetooth_read() {
   if (Serial.available()) {
-    return Serial.read();
+    return Serial.readStringUntil('\n'); // read full command
   }
-  return NULL; 
+  return ""; // return empty String
 }

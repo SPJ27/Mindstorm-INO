@@ -24,7 +24,7 @@ void bluetooth_car() {
   write_text(0, "Bluetooth Car");
   write_text(1, "Waiting cmd");
   while (detect_action(8) == 0) {
-    String val = read_bluetooth();
+    String val = bluetooth_read();
     if (val == '1') {
       move(M1, FRONT, 255);
       move(M2, FRONT, 255);
@@ -71,7 +71,7 @@ void line_follower() {
 void bluetooth_text_reader() {
   write_text(0, "BT Text Mode");
   while (detect_action(8) == 0) {
-    String text = read_bluetooth();
+    String text = bluetooth_read();
     if (text.length() > 0) {
       write_text(1, text);
     }
