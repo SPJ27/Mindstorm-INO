@@ -7,3 +7,12 @@ String bluetooth_read() {
   }
   return ""; // return empty String
 }
+
+String bluetooth_status() {
+  if (Serial.available()) {
+    return "Connected";
+  }
+  else{
+    return "Not Connected";
+  }
+}
