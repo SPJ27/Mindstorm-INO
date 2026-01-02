@@ -27,16 +27,16 @@ void bluetooth_car() {
   while (detect_action(8) == 0) {
     write_text(1, bluetooth_status());
     String val = bluetooth_read();
-    if (val == '1') {
+    if (val == "1") {
       move(M1, FRONT, 255);
       move(M2, FRONT, 255);
-    } else if (val == '2') {
+    } else if (val == "2") {
       move(M1, BACK, 255);
       move(M2, BACK, 255);
-    } else if (val == '3') {
+    } else if (val == "3") {
       move(M1, BACK, 255);
       move(M2, FRONT, 255);
-    } else if (val == '4') {
+    } else if (val == "4") {
       move(M1, FRONT, 255);
       move(M2, BACK, 255);
     }
